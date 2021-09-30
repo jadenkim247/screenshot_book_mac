@@ -14,9 +14,9 @@ def screenshot_book_mac():                   # 함수 정의
     for i in range(n + 1):                   # n번(책 페이지 수)만큼 이 작업을 반복하라
         pg.hotkey('command', 'shift', '5')   # 캡쳐 단축키
         pg.press('enter')                    # 캡쳐
-        pg.click(mouse); time.sleep(1)       # 다음 장으로 넘기기
+        pg.click(mouse); time.sleep(1)       # 다음 장으로 넘기기; 1초 대기
 
-screenshot_book_mac()                        # 함수 실행
+screenshot_book_mac()                        # 위 함수 실행
 
 # 실제 코딩 부분 ------------------------------------------------------------------
 
