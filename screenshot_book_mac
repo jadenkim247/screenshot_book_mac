@@ -1,0 +1,31 @@
+import time
+import pyautogui as pg
+
+
+
+print("Process Start.")
+start_time = time.time()
+
+
+
+mouse = (1600, 960)  # 책의 다음쪽을 넘길 때 클릭할 부분 좌표
+n = 583  # 책 페이지 수
+
+
+def screenshot_book_mac():
+    for i in range(n + 1):
+        pg.hotkey('command', 'shift', '5')  # 캡쳐 단축키
+        pg.press('enter')   # 캡쳐
+        pg.click(mouse); time.sleep(1) # 다음 장으로 넘기기
+
+screenshot_book_mac()
+
+
+
+print("Process Done.")
+end_time = time.time()
+
+total_time = end_time - start_time
+
+print("The total job took  " + str(total_time) + " seconds.")
+print("One page scan took  " + str(total_time / n) + " seconds.")
